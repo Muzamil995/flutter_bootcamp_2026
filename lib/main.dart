@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bootcamp_two/session_two/session_two.dart';
 
 void main() {
   
@@ -15,69 +16,69 @@ void main() {
        //theme designing
        //navigation
        //parent widget
-       home:
-           Scaffold(
-             //appbar
-             //drawer
-             //bottom navigation bar
-             //body
-             appBar: AppBar(
-               centerTitle: true,
-               title: Text("My First App"
-               ,
-                 style: TextStyle(
-                   color: Colors.white,
-                   fontSize: 28,
-                   fontWeight: FontWeight.w500
+       home: SessionTwo(),
+          //  Scaffold(
+          //    //appbar
+          //    //drawer
+          //    //bottom navigation bar
+          //    //body
+          //    appBar: AppBar(
+          //      centerTitle: true,
+          //      title: Text("My First App"
+          //      ,
+          //        style: TextStyle(
+          //          color: Colors.white,
+          //          fontSize: 28,
+          //          fontWeight: FontWeight.w500
 
-                 ),
-               ),
-               backgroundColor: Colors.amber,
-             ),
-             backgroundColor: Colors.teal,
-             body:Row(
-               mainAxisAlignment: MainAxisAlignment.start,
-               crossAxisAlignment: CrossAxisAlignment.center,
-               children: [
-                 Text("My first App",
-                   style: TextStyle(
-                       color: Colors.white,
-                       fontSize: 28,
-                       fontWeight: FontWeight.w500
+          //        ),
+          //      ),
+          //      backgroundColor: Colors.amber,
+          //    ),
+          //    backgroundColor: Colors.teal,
+          //    body:Row(
+          //      mainAxisAlignment: MainAxisAlignment.start,
+          //      crossAxisAlignment: CrossAxisAlignment.center,
+          //      children: [
+          //        Text("My first App",
+          //          style: TextStyle(
+          //              color: Colors.white,
+          //              fontSize: 28,
+          //              fontWeight: FontWeight.w500
 
-                   ),),
-                 SizedBox(
+          //          ),),
+          //        SizedBox(
 
-                   width: 30,
-                 ),
-                 Text("My first App",
-                   style: TextStyle(
-                       color: Colors.white,
-                       fontSize: 28,
-                       fontWeight: FontWeight.w500
+          //          width: 30,
+          //        ),
+          //        Text("My first App",
+          //          style: TextStyle(
+          //              color: Colors.white,
+          //              fontSize: 28,
+          //              fontWeight: FontWeight.w500
 
-                   ),),
+          //          ),),
 
-               ],
-             )
+          //      ],
+          //    )
 
-               // Column(
-               //   mainAxisAlignment: MainAxisAlignment.center,
-               //   crossAxisAlignment: CrossAxisAlignment.start,
-               //   children: [
-               //     Text("My first App"),
-               //     Text("My first App"),
-               //     Text("My first App"),
-               //   ],
-               // )
+          //      // Column(
+          //      //   mainAxisAlignment: MainAxisAlignment.center,
+          //      //   crossAxisAlignment: CrossAxisAlignment.start,
+          //      //   children: [
+          //      //     Text("My first App"),
+          //      //     Text("My first App"),
+          //      //     Text("My first App"),
+          //      //   ],
+          //      // )
 
-           ),
-
-
+          //  ),
 
 
 
-     );
+
+
+    );
    }
  }
  
