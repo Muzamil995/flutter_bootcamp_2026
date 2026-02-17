@@ -89,7 +89,8 @@ class SessionTwo extends StatelessWidget {
                 onPressed: ( ){},
                child: Text("Login")),
          
-               Image(image: AssetImage("assets/banner.png")),
+            Image.asset("assets_image/banner.png"),
+
          
                 Image(image: NetworkImage("https://media.istockphoto.com/id/476683764/photo/water-splash.jpg?s=2048x2048&w=is&k=20&c=NVEy_tCAue-fwozIvVaZm5EnPrwieiz9UmOawcWkgF8="))
           
