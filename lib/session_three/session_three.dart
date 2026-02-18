@@ -115,28 +115,33 @@ class _SessionThreeState extends State<SessionThree> {
               ),
 
               SizedBox(height: 10),
-              Container(
-                width: double.infinity,
-                height: 60,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(color: Colors.grey, spreadRadius: sqrt1_2),
-                  ],
-                ),
-                child: Center(
-                  child: Row(
-                    children: [
-                      // Image(
-                      //   fit: BoxFit.fill,
-                      //   image: NetworkImage(
-                      //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvGTLrLLfLKVfFxGoyhoD1JlYF7bsW99uZ4Q&s",
-                      //   ),
-                      // ),
-                      SizedBox(width: 46),
-                      Icon(Icons.mobile_off_sharp),
-                      SizedBox(width: 5),
-                      Text("Signup with google"),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: double.infinity,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(14),
+                    boxShadow: [
+                      BoxShadow(color: Colors.grey, spreadRadius: sqrt1_2),
                     ],
+                  ),
+                  child: Center(
+                    child: Row(
+                      children: [
+                        // Image(
+                        //   fit: BoxFit.fill,
+                        //   image: NetworkImage(
+                        //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvGTLrLLfLKVfFxGoyhoD1JlYF7bsW99uZ4Q&s",
+                        //   ),
+                        // ),
+                        SizedBox(width: 46),
+                        Icon(Icons.mobile_off_sharp),
+                        SizedBox(width: 5),
+                        Text("Signup with google"),
+                      ],
+                    ),
                   ),
                 ),
               ),
