@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bootcamp_two/session_five/calculator_app.dart';
 import 'package:flutter_bootcamp_two/session_four/session_four.dart';
+import 'package:flutter_bootcamp_two/session_six/image_picker_screen.dart';
+import 'package:flutter_bootcamp_two/session_six/session_six.dart';
 import 'package:flutter_bootcamp_two/session_three/session_three.dart';
 
 void main() {
@@ -16,7 +19,7 @@ class MyCode extends StatelessWidget {
       //navigation
       //parent widget
       debugShowCheckedModeBanner: false,
-      home: SessionFour(),
+      home: ImagePickerScreen(),
 
       //  Scaffold(
       //    //appbar
