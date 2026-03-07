@@ -47,49 +47,51 @@ class LoginScreen extends StatelessWidget {
         backgroundColor: Colors.blueGrey,
       ),
 
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        //mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(height: 30),
-          Text(
-            "Welcome to Bootcamp",
-            style: TextStyle(
-              color: Colors.black87,
-              fontWeight: FontWeight.w600,
-              fontSize: 25,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 30),
+            Text(
+              "Welcome to Bootcamp",
+              style: TextStyle(
+                color: Colors.black87,
+                fontWeight: FontWeight.w600,
+                fontSize: 25,
+              ),
             ),
-          ),
-          SizedBox(height: 20),
-
-          Padding(
-            padding: const EdgeInsets.all(14.0),
-            child: TextFormField(
-              controller: emailController,
-              decoration: InputDecoration(hintText: "Enter an Email"),
+            SizedBox(height: 20),
+        
+            Padding(
+              padding: const EdgeInsets.all(14.0),
+              child: TextFormField(
+                controller: emailController,
+                decoration: InputDecoration(hintText: "Enter an Email"),
+              ),
             ),
-          ),
-
-          SizedBox(height: 10),
-
-          Padding(
-            padding: const EdgeInsets.all(14.0),
-            child: TextFormField(
-              obscureText: true,
-              controller: passwordController,
-              decoration: InputDecoration(hintText: "Enter a Password"),
+        
+            SizedBox(height: 10),
+        
+            Padding(
+              padding: const EdgeInsets.all(14.0),
+              child: TextFormField(
+                obscureText: true,
+                controller: passwordController,
+                decoration: InputDecoration(hintText: "Enter a Password"),
+              ),
             ),
-          ),
-          SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: () {
-               LoginUser(context);
-            },
-            child: Text("Login"),
-          ),
-
-          SizedBox(height: 20),
-        ],
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                 LoginUser(context);
+              },
+              child: Text("Login"),
+            ),
+        
+            SizedBox(height: 20),
+          ],
+        ),
       ),
     );
   }
