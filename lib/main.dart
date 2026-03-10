@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bootcamp_two/session_eight/create_user_screen.dart';
+import 'package:flutter_bootcamp_two/session_eleven/post_screen.dart';
  import 'package:flutter_bootcamp_two/session_five/calculator_app.dart';
 import 'package:flutter_bootcamp_two/session_four/session_four.dart';
 import 'package:flutter_bootcamp_two/session_seven/login_screen.dart';
@@ -31,12 +32,12 @@ class MyCode extends StatelessWidget {
       //navigation
       //parent widget
       debugShowCheckedModeBanner: false,
-     // home: ThemeRoute()
-      initialRoute: "splash",
-      routes: {
-        "splash":(context)=>Splashscreen(),
-        ...AppRoutes.getRoutes(),
-      },
+      home: PostScreen()
+      // initialRoute: "splash",
+      // routes: {
+      //   "splash":(context)=>Splashscreen(),
+      //   ...AppRoutes.getRoutes(),
+      // },
   
 
       //  Scaffold(
