@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bootcamp_two/session_eight/view_all_user_screen.dart';
+import 'package:flutter_bootcamp_two/session_ten/app_routes.dart';
 
 class CreateUserScreen extends StatefulWidget {
   const CreateUserScreen({super.key});
@@ -11,7 +12,7 @@ class CreateUserScreen extends StatefulWidget {
 }
 
 class _CreateUserScreenState extends State<CreateUserScreen> {
-  final formKey = GlobalKey<FormState>();
+  final formKey = GlobalKey<FormState>(); // form key 
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController ageController = TextEditingController();
@@ -20,16 +21,30 @@ class _CreateUserScreenState extends State<CreateUserScreen> {
     app: Firebase.app(),
 
     databaseURL: "https://bootcamp-7fd72-default-rtdb.firebaseio.com/",
-  ).ref('users');
+  ).ref('users'); ///collection name 
 
   void createUser() async {
-    if (formKey.currentState!.validate()) {
+    if (formKey.currentState!.validate())//
+    
+     {
+        //unique
+
       String id = DateTime.now().millisecondsSinceEpoch.toString();
-      await _ref.child(id).set({
+
+
+
+      await _ref.
+
+      child(id)
+
+      .set({
+            //key : value
         'id': id,
         'name': nameController.text.trim(),
         'email': emailController.text.trim(),
         'age': ageController.text.trim(),
+
+
       });
       // ✅ Clear fields after submission
     nameController.clear();
@@ -38,7 +53,7 @@ class _CreateUserScreenState extends State<CreateUserScreen> {
 
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(SnackBar(content: Text("USer Created Successfully")));
+      ).showSnackBar(SnackBar(content: Text("User Created Successfully")));
 
       setState(() {
         
@@ -60,7 +75,7 @@ class _CreateUserScreenState extends State<CreateUserScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Form(
+            Form( // new 
               key: formKey,
               child: Padding(
                 padding: const EdgeInsets.all(14.0),
@@ -72,7 +87,7 @@ class _CreateUserScreenState extends State<CreateUserScreen> {
                         hintText: "Enter a name",
                         border: OutlineInputBorder(),
                       ),
-                      validator: (v) => v!.isEmpty ? "Enter Name" : null,
+                      validator: (v) => v!.isEmpty ? "Enter Name" : null, // string funNAme(string variable){} // texfield sa value pick kar ta 
                     ),
         
                     SizedBox(height: 10),
@@ -126,7 +141,8 @@ class _CreateUserScreenState extends State<CreateUserScreen> {
                   backgroundColor: WidgetStatePropertyAll(Colors.teal),
                 ),
                 onPressed: () {
-                   Navigator.push(context, MaterialPageRoute(builder: (context)=>ViewAllUserScreen()));
+
+                   Navigator.pushNamed(context, AppRoutes.viewAllUser);
                 },
                 child: Text("View All Users", style: TextStyle(color: Colors.white)),
               ),

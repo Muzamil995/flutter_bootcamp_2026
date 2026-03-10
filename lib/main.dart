@@ -6,6 +6,9 @@ import 'package:flutter_bootcamp_two/session_seven/login_screen.dart';
 import 'package:flutter_bootcamp_two/session_seven/register_Screen.dart';
 import 'package:flutter_bootcamp_two/session_six/image_picker_screen.dart';
 import 'package:flutter_bootcamp_two/session_six/session_six.dart';
+import 'package:flutter_bootcamp_two/session_ten/app_routes.dart';
+import 'package:flutter_bootcamp_two/session_ten/splashScreen.dart';
+import 'package:flutter_bootcamp_two/session_ten/theme_route.dart';
 import 'package:flutter_bootcamp_two/session_three/session_three.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -28,9 +31,13 @@ class MyCode extends StatelessWidget {
       //navigation
       //parent widget
       debugShowCheckedModeBanner: false,
-      home: CreateUserScreen()
-      
-  ,
+     // home: ThemeRoute()
+      initialRoute: "splash",
+      routes: {
+        "splash":(context)=>Splashscreen(),
+        ...AppRoutes.getRoutes(),
+      },
+  
 
       //  Scaffold(
       //    //appbar

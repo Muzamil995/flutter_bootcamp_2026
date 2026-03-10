@@ -104,20 +104,37 @@ class _ViewAllUserScreenState extends State<ViewAllUserScreen> {
         backgroundColor: Colors.teal,
       ),
 
-      body: StreamBuilder<DatabaseEvent>(
+      body: StreamBuilder<DatabaseEvent>( 
+        // continous listening db 
         stream: _ref.onValue,
-        builder: (context, snapshot) {
+
+
+        builder: (context, snapshot) { // snapshot jis ma na sara data 
+
           if (!snapshot.hasData || snapshot.data!.snapshot.value == null) {
+
             return Center(child: Text("No Users "));
           }
-          final Map data = snapshot.data!.snapshot.value as Map;
-          final users = data.values.toList();
+
+          final Map data = snapshot.data!.snapshot.value as Map; // key : value pairs 
+
+
+          final users = data.values.toList(); // converted to list  [0,1,2,3,4,]
 
           return ListView.builder(
-            itemCount: users.length, //one index aayee
-            itemBuilder: (context, index) {
+
+            itemCount: users.length, //one index aayee  
+
+
+
+            itemBuilder: (context, index) // index ka data 
+            
+             {
               final user = Map<String, dynamic>.from(users[index]);
-              final String id = user['id'];
+
+
+
+              final String id = user['id']; // user[0]=
               return Card(
                 margin: EdgeInsets.all(8),
                 child: ListTile(
