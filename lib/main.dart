@@ -12,6 +12,7 @@ import 'package:flutter_bootcamp_two/session_ten/splashScreen.dart';
 import 'package:flutter_bootcamp_two/session_ten/theme_route.dart';
 import 'package:flutter_bootcamp_two/session_three/session_three.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_bootcamp_two/session_twelve/session_twelve.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -32,7 +33,7 @@ class MyCode extends StatelessWidget {
       //navigation
       //parent widget
       debugShowCheckedModeBanner: false,
-      home: PostScreen()
+      home: SessionTwelve()
       // initialRoute: "splash",
       // routes: {
       //   "splash":(context)=>Splashscreen(),
