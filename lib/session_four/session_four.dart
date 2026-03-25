@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SessionFour extends StatefulWidget {
   const SessionFour({super.key});
@@ -86,6 +87,13 @@ class _SessionFourState extends State<SessionFour> {
               Icon(Icons.edit),
             ],
           ),
+           SizedBox(height: 12),
+            ElevatedButton(
+              onPressed: () {
+                Get.back();
+              },
+              child: Text("Back"),
+            ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

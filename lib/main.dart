@@ -10,9 +10,11 @@ import 'package:flutter_bootcamp_two/session_six/session_six.dart';
 import 'package:flutter_bootcamp_two/session_ten/app_routes.dart';
 import 'package:flutter_bootcamp_two/session_ten/splashScreen.dart';
 import 'package:flutter_bootcamp_two/session_ten/theme_route.dart';
+import 'package:flutter_bootcamp_two/session_thirteen/session_thirteen.dart';
 import 'package:flutter_bootcamp_two/session_three/session_three.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bootcamp_two/session_twelve/session_twelve.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -28,12 +30,12 @@ class MyCode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(//important
       //theme designing
       //navigation
       //parent widget
       debugShowCheckedModeBanner: false,
-      home: SessionTwelve()
+      home: SnackBarScreen()
       // initialRoute: "splash",
       // routes: {
       //   "splash":(context)=>Splashscreen(),
