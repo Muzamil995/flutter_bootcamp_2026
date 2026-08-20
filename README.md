@@ -97,3 +97,39 @@ image_picker
 math_expressions
 confetti
 animated_text_kit
+
+
+
+
+flutter_bootcamp_2025/
+│
+├── android/
+├── web/
+├── test/
+│
+├── asessts/
+│
+├── lib/
+│   │
+│   ├── main.dart
+│   ├── firebase_options.dart
+│   │
+│   ├── session_one/
+│   ├── session_two/
+│   ├── session_three/
+│   ├── session_four/
+│   ├── session_five/
+│   ├── session_six/
+│   ├── session_seven/
+│   ├── session_eight/
+│   ├── session_nine_ten/
+│   ├── session_eleven/
+│   ├── session_twelve/
+│   ├── session_thirteen/
+│   └── session_fourteen/
+│
+├── firebase.json
+├── pubspec.yaml
+├── pubspec.lock
+├── analysis_options.yaml
+└── README.md
